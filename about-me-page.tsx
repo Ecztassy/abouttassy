@@ -283,77 +283,76 @@ export default function AboutMe() {
   }
 
   // Webkit scrollbar styles per theme (since scrollbar-color doesn't cover all browsers)
-  const webkitScrollbarStyles: Record<Theme, React.CSSProperties> = {
-    persona: {
-      WebkitScrollbarWidth: "12px",
-      WebkitScrollbarTrackBackground: "#000000",
-      WebkitScrollbarThumbBackground: "#dc2626", // red-600
-      WebkitScrollbarThumbBorderRadius: "0.5rem",
-      WebkitScrollbarThumbBorder: "2px solid #000000",
-    },
-    ultrakill: {
-      WebkitScrollbarWidth: "12px",
-      WebkitScrollbarTrackBackground: "#000000",
-      WebkitScrollbarThumbBackground: "#b91c1c", // red-700
-      WebkitScrollbarThumbBorderRadius: "0.5rem",
-      WebkitScrollbarThumbBorder: "2px solid #000000",
-    },
-    madoka: {
-      WebkitScrollbarWidth: "12px",
-      WebkitScrollbarTrackBackground: "#000000",
-      WebkitScrollbarThumbBackground: "#ec4899", // pink-500
-      WebkitScrollbarThumbBorderRadius: "0.5rem",
-      WebkitScrollbarThumbBorder: "2px solid #000000",
-    },
-    lain: {
-      WebkitScrollbarWidth: "12px",
-      WebkitScrollbarTrackBackground: "#000000",
-      WebkitScrollbarThumbBackground: "#22c55e", // green-500
-      WebkitScrollbarThumbBorderRadius: "0.5rem",
-      WebkitScrollbarThumbBorder: "2px solid #000000",
-    },
-    sailor: {
-      WebkitScrollbarWidth: "12px",
-      WebkitScrollbarTrackBackground: "#000000",
-      WebkitScrollbarThumbBackground: "#f472b6", // pink-400
-      WebkitScrollbarThumbBorderRadius: "0.5rem",
-      WebkitScrollbarThumbBorder: "2px solid #000000",
-    },
-  }
+  const webkitScrollbarStyles = {
+  persona: {
+    trackBackground: "#000000",
+    thumbBackground: "#dc2626", // red-600
+    thumbBorderRadius: "0.5rem",
+    thumbBorder: "2px solid #000000",
+  },
+  ultrakill: {
+    trackBackground: "#000000",
+    thumbBackground: "#b91c1c", // red-700
+    thumbBorderRadius: "0.5rem",
+    thumbBorder: "2px solid #000000",
+  },
+  madoka: {
+    trackBackground: "#000000",
+    thumbBackground: "#ec4899", // pink-500
+    thumbBorderRadius: "0.5rem",
+    thumbBorder: "2px solid #000000",
+  },
+  lain: {
+    trackBackground: "#000000",
+    thumbBackground: "#22c55e", // green-500
+    thumbBorderRadius: "0.5rem",
+    thumbBorder: "2px solid #000000",
+  },
+  sailor: {
+    trackBackground: "#000000",
+    thumbBackground: "#f472b6", // pink-400
+    thumbBorderRadius: "0.5rem",
+    thumbBorder: "2px solid #000000",
+  },
+};
 
   return (
     <>
       <style jsx global>{`
-        html, body {
-          margin: 0;
-          padding: 0;
-          overflow-x: hidden;
-          background-color: #000;
-          color: white;
-          width: 100%;
-          height: 100%;
-        }
-        
-        *::-webkit-scrollbar {
-          width: 12px;
-          height: 12px;
-        }
-        *::-webkit-scrollbar-track {
-          background: ${webkitScrollbarStyles[currentTheme].WebkitScrollbarTrackBackground};
-          border-radius: ${webkitScrollbarStyles[currentTheme].WebkitScrollbarThumbBorderRadius};
-        }
-        *::-webkit-scrollbar-thumb {
-          background: ${webkitScrollbarStyles[currentTheme].WebkitScrollbarThumbBackground};
-          border-radius: ${webkitScrollbarStyles[currentTheme].WebkitScrollbarThumbBorderRadius};
-          border: ${webkitScrollbarStyles[currentTheme].WebkitScrollbarThumbBorder};
-        }
-        *::-webkit-scrollbar-thumb:hover {
-          background: ${webkitScrollbarStyles[currentTheme].WebkitScrollbarThumbBackground}cc; /* 80% opacity */
-        }
-        *::-webkit-scrollbar-corner {
-          background: ${webkitScrollbarStyles[currentTheme].WebkitScrollbarTrackBackground};
-        }
-      `}</style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #000;
+    color: white;
+    width: 100%;
+    height: 100%;
+  }
+
+  *::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: ${webkitScrollbarStyles[currentTheme].trackBackground};
+    border-radius: ${webkitScrollbarStyles[currentTheme].thumbBorderRadius};
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: ${webkitScrollbarStyles[currentTheme].thumbBackground};
+    border-radius: ${webkitScrollbarStyles[currentTheme].thumbBorderRadius};
+    border: ${webkitScrollbarStyles[currentTheme].thumbBorder};
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background: ${webkitScrollbarStyles[currentTheme].thumbBackground}cc;
+  }
+
+  *::-webkit-scrollbar-corner {
+    background: ${webkitScrollbarStyles[currentTheme].trackBackground};
+  }
+`}</style>
 
       <div
         className={`min-h-screen w-full text-white ${themeClasses[currentTheme]}`}
@@ -703,8 +702,8 @@ export default function AboutMe() {
                         anime, gaming, and all things internet.
                       </p>
                       <p>
-                        When I'm not diving into the worlds of Persona, Madoka Magica, Lain, or Sailor Moon, you might
-                        find me playing ULTRAKILL or working on horror RPG maker games.
+                        I like a lot of things so, if u have anything new or  something I have forgotten please do try to reach me.
+                        I love psychological horror, manga, anime, gundam, lego, mecha, yugioh, magic n much more.
                       </p>
                     </div>
                   </motion.div>
