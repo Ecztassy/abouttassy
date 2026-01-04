@@ -485,7 +485,7 @@ export default function AboutMe() {
                         : "blur(0px)",
                     }}
                   >
-                    XTassy
+                    Xhrkz
                   </motion.h1>
                   <div className="mt-2 flex flex-wrap justify-center md:justify-start gap-2">
                     <span
