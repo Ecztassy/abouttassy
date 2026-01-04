@@ -525,7 +525,7 @@ export default function AboutMe() {
                       className="opacity-70 hover:opacity-100 transition-opacity"
                     >
                       <Link
-                        href="https://www.instagram.com/ecztassy/"
+                        href="https://www.instagram.com/xh4rkz/"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Instagram"
